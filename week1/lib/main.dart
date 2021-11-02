@@ -1,20 +1,19 @@
 import 'package:flutter/material.dart';
-import 'package:demo/routes/path.dart';
-import 'package:demo/routes/routes.dart';
+import 'package:week1/routers/path.dart';
+import 'package:week1/routers/router.dart';
 
-void main() {
-  runApp(const MyApp());
-}
+void main() => runApp(const MyApp());
 
 class MyApp extends StatelessWidget {
   const MyApp({Key? key}) : super(key: key);
 
-  // This widget is the root of your application.
+  static const appTitle = 'Home page';
+
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      title: 'Homework',
       debugShowCheckedModeBanner: false,
+      title: 'Home page',
       theme: ThemeData(
         primarySwatch: Colors.blue,
       ),
@@ -23,3 +22,9 @@ class MyApp extends StatelessWidget {
     );
   }
 }
+
+
+
+
+
+
