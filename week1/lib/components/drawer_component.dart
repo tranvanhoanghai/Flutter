@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:week1/screens/page1.dart';
 import 'package:week1/screens/page2.dart';
+
 class DrawerComponent extends StatelessWidget {
   const DrawerComponent({Key? key}) : super(key: key);
 
@@ -8,16 +9,27 @@ class DrawerComponent extends StatelessWidget {
   Widget build(BuildContext context) {
     return ListView(
       children: <Widget>[
-        const DrawerHeader(
-          decoration: BoxDecoration(
-            color: Colors.blue,
-          ),
-          margin: EdgeInsets.zero,
-          padding: EdgeInsets.zero,
-          child: Text('Drawer Header'),
+        Container(
+          child: DrawerHeader(
+              decoration: BoxDecoration(
+                color: Colors.blue,
+              ),
+              margin: EdgeInsets.zero,
+              padding: EdgeInsets.zero,
+              child: Container(
+                width: MediaQuery.of(context).size.width,
+                child: Image(
+                  image: AssetImage('assets/images/a.png'),
+                  alignment: Alignment.center,
+                  height: double.infinity,
+                  width: double.infinity,
+                  fit: BoxFit.fill,
+                ),
+              )),
         ),
         ListTile(
-          title: const Text('Item 1'),
+          leading: Icon(Icons.settings),
+          title: const Text('Page 1'),
           onTap: () {
             Navigator.pop(context);
             Navigator.push(context,
@@ -25,7 +37,8 @@ class DrawerComponent extends StatelessWidget {
           },
         ),
         ListTile(
-          title: const Text('Item 2'),
+          leading: Icon(Icons.settings),
+          title: const Text('Page 2'),
           onTap: () {
             Navigator.pop(context);
             Navigator.push(context,
