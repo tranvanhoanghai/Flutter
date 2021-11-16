@@ -8,9 +8,14 @@ class IntroducePage1 extends StatelessWidget {
   Widget build(BuildContext context) {
     return const IntroducePage(
       image: 'assets/images/introduces/intro1.png',
-           title: 'My Furniture',
-           subTitle: 'Your perfect interior design',
-           btnNext: 'null4',
+      title: 'My Furniture',
+      subTitle: 'Your perfect interior design',
+      btnNext: 'Continue',
+      // onNext: function(){
+      //   return
+      // };
+
     );
+
   }
 }

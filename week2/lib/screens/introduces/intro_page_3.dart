@@ -7,10 +7,10 @@ class IntroducePage3 extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return const IntroducePage(
-      image: 'null',
-      title: 'null',
-      subTitle: 'null',
-      btnNext: 'null',
+      image: 'assets/images/introduces/intro3.png',
+      title: 'My Furniture',
+      subTitle: 'Find your best furniture',
+      btnNext: 'Continue',
     );
   }
 }

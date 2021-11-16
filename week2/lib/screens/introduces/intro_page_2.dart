@@ -6,11 +6,11 @@ class IntroducePage2 extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return const IntroducePage(
+    return  const IntroducePage(
       image: 'assets/images/introduces/intro2.png',
-      title: 'null2',
-      subTitle: 'null3',
-      btnNext: 'null4',
+      title: 'My Furniture',
+      subTitle: 'We send your best furniture',
+      btnNext: 'Continue',
     );
   }
 }
