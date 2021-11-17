@@ -1,4 +1,7 @@
 import 'package:flutter/material.dart';
+import 'package:week2/constants/colors.dart';
+
+import 'login.dart';
 
 class RegisterSuccess extends StatelessWidget {
   const RegisterSuccess({Key? key}) : super(key: key);
@@ -6,7 +9,7 @@ class RegisterSuccess extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
-        padding: const EdgeInsets.symmetric(horizontal: 28.0, vertical: 16.0),
+        color: introduceBg,
         child: Column(
           children: <Widget>[
             Expanded(
@@ -16,8 +19,7 @@ class RegisterSuccess extends StatelessWidget {
                   Column(
                     children: const [
                       Image(
-                        image:
-                            AssetImage('assets/images/auths/reg_done.png'),
+                        image: AssetImage('assets/images/auths/reg_done.png'),
                       ),
                     ],
                   ),
@@ -30,7 +32,12 @@ class RegisterSuccess extends StatelessWidget {
               shape: RoundedRectangleBorder(
                   borderRadius: BorderRadius.circular(12)),
               onPressed: () {
-                // widget.onNext('vc');
+                Navigator.push(
+                  context,
+                  MaterialPageRoute(
+                    builder: (context) => const Login(),
+                  ),
+                );
               },
               child: const Text(
                 'Login Now',
@@ -45,3 +52,5 @@ class RegisterSuccess extends StatelessWidget {
         ));
   }
 }
+
+

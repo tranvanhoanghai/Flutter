@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:week2/constants/colors.dart';
+import 'package:week2/routers/router.dart';
+import 'package:week2/screens/export_screen.dart';
 import 'package:week2/screens/home/home.dart';
 
 void main() {
@@ -20,7 +22,8 @@ class MyApp extends StatelessWidget {
         splashColor: Colors.transparent,
         visualDensity: VisualDensity.adaptivePlatformDensity,
       ),
-      home: const HomeScreen(),
+      home: const IntroducePage1(),
+       // routes: routes,
     );
   }
 }
