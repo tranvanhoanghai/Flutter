@@ -32,7 +32,7 @@ class RegisterSuccess extends StatelessWidget {
               ),
               MaterialButton(
                 height: 58,
-                minWidth: 340,
+                minWidth: double.infinity,
                 shape: RoundedRectangleBorder(
                     borderRadius: BorderRadius.circular(12)),
                 onPressed: () {

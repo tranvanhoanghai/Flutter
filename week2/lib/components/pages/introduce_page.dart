@@ -90,7 +90,7 @@ class _IntroducePageState extends State<IntroducePage> {
           ),
           MaterialButton(
             height: 55,
-            minWidth: 340,
+            minWidth: double.infinity,
             shape: RoundedRectangleBorder(
               borderRadius: BorderRadius.circular(10),
             ),

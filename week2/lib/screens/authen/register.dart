@@ -47,7 +47,6 @@ class Register extends StatelessWidget {
                 ],
               ),
               const SizedBox(height: 15),
-
               Expanded(
                 child: Column(
                   children: const <Widget>[
@@ -149,7 +148,7 @@ class Register extends StatelessWidget {
                   const SizedBox(height: 10),
                   MaterialButton(
                     height: 50,
-                    minWidth: 360,
+                    minWidth: double.infinity,
                     shape: RoundedRectangleBorder(
                         borderRadius: BorderRadius.circular(10)),
                     onPressed: () {

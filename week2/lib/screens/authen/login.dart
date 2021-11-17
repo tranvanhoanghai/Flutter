@@ -76,7 +76,7 @@ class Login extends StatelessWidget {
                   const SizedBox(height: 15),
                   MaterialButton(
                     height: 55,
-                    minWidth: 360,
+                    minWidth: double.infinity,
                     shape: RoundedRectangleBorder(
                         borderRadius: BorderRadius.circular(10)),
                     onPressed: () {
