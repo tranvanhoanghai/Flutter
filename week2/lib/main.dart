@@ -22,8 +22,8 @@ class MyApp extends StatelessWidget {
         splashColor: Colors.transparent,
         visualDensity: VisualDensity.adaptivePlatformDensity,
       ),
-      home: const IntroducePage1(),
-       // routes: routes,
+      home: const HomeScreen(),
+       routes: routes,
     );
   }
 }
