@@ -77,7 +77,7 @@ class _ForgotPassState extends State<ForgotPass> {
               textLeft: "Having Problem?",
               textRight: "Need Help",
               action: () {
-                Navigator.pushNamed(context, homePath);
+                Navigator.pushNamed(context, homeScreen);
               },
             ),
           ],

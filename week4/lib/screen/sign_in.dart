@@ -84,20 +84,6 @@ class _SignInState extends State<SignIn> {
                     ),
                     Row(
                       children: [
-                        // SizedBox(
-                        //   height: 10,
-                        //   child: CupertinoSwitch(
-                        //     activeColor: Color(0xfffe734c),
-                        //     value: toggle,
-                        //     onChanged: (bool value) {
-                        //       setState(
-                        //         () {
-                        //           toggle = value;
-                        //         },
-                        //       );
-                        //     },
-                        //   ),
-                        // ),
                         SizedBox(
                             width: 50,
                             child: Switch(

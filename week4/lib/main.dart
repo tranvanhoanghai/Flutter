@@ -3,7 +3,7 @@ import 'package:week4/route/routes.dart';
 import 'package:flutter/material.dart';
 
 void main() {
-  runApp(MyApp());
+  runApp(const MyApp());
 }
 
 class MyApp extends StatelessWidget {
@@ -16,9 +16,16 @@ class MyApp extends StatelessWidget {
       title: 'Flutter Demo',
       debugShowCheckedModeBanner: false,
       theme: ThemeData(
-          // scaffoldBackgroundColor: const Color(0xFFf5f8ff),
+        appBarTheme: const AppBarTheme(
+          elevation: 0,
+          backgroundColor: Colors.transparent,
+          iconTheme: IconThemeData(
+            color: Colors.black,
           ),
-      initialRoute: homePath,
+          centerTitle: true,
+        ),
+      ),
+      initialRoute: homeScreen,
       routes: routes,
     );
   }
