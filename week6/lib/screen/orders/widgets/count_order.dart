@@ -18,7 +18,7 @@ class _CountCartState extends State<CountCart> {
       visible: widget.isShow,
       child: Container(
         constraints:
-            const BoxConstraints(minHeight: 30, minWidth: 80, maxWidth: 100),
+            const BoxConstraints(minHeight: 30, minWidth: 80, maxWidth: 90),
         decoration: const BoxDecoration(
           borderRadius: BorderRadius.all(
             Radius.circular(6),

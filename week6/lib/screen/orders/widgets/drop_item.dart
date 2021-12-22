@@ -14,37 +14,41 @@ class _DropItemState extends State<DropItem> {
   String dropdownValue = 'Venty';
   @override
   Widget build(BuildContext context) {
-    return Visibility(
-      visible: widget.isShow,
-      child: Container(
-        height: 30,
-        width: widget.isShow ? 110 : 80,
-        padding: const EdgeInsets.symmetric(horizontal: 5),
-        decoration: BoxDecoration(
-          color: secondaryGrey,
-          borderRadius: BorderRadius.circular(5),
-        ),
-        child: DropdownButtonHideUnderline(
-          child: DropdownButton<String>(
-            // isExpanded: true,
-            value: dropdownValue,
-            icon: const Icon(Icons.keyboard_arrow_down),
-            elevation: 16,
-            onChanged: (String? newValue) {
-              setState(() {
-                dropdownValue = newValue!;
-              });
-            },
-            items: <String>['Venty', 'Venty1', 'Venty2', 'Venty3']
-                .map<DropdownMenuItem<String>>((String value) {
-              return DropdownMenuItem<String>(
-                value: value,
-                child: Text(value),
-              );
-            }).toList(),
-          ),
-        ),
-      ),
-    );
+    return !widget.isShow
+        ? const SizedBox(
+            height: 30,
+          )
+        : Visibility(
+            visible: widget.isShow,
+            child: Container(
+              height: 30,
+              width: widget.isShow ? 120 : 80,
+              padding: const EdgeInsets.symmetric(horizontal: 5),
+              decoration: BoxDecoration(
+                color: secondaryGrey,
+                borderRadius: BorderRadius.circular(5),
+              ),
+              child: DropdownButtonHideUnderline(
+                child: DropdownButton<String>(
+                  // isExpanded: true,
+                  value: dropdownValue,
+                  icon: const Icon(Icons.keyboard_arrow_down),
+                  elevation: 16,
+                  onChanged: (String? newValue) {
+                    setState(() {
+                      dropdownValue = newValue!;
+                    });
+                  },
+                  items: <String>['Venty', 'Venty1', 'Venty2', 'Venty3']
+                      .map<DropdownMenuItem<String>>((String value) {
+                    return DropdownMenuItem<String>(
+                      value: value,
+                      child: Text(value),
+                    );
+                  }).toList(),
+                ),
+              ),
+            ),
+          );
   }
 }

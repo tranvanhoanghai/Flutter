@@ -3,6 +3,7 @@ import 'package:week6/components/header.dart';
 import 'package:week6/components/list_orders.dart';
 import 'package:week6/components/tag_item.dart';
 import 'package:week6/constants/colors.dart';
+import 'package:week6/screen/orders/widgets/order_option.dart';
 
 class OrderScreen extends StatefulWidget {
   const OrderScreen({Key? key}) : super(key: key);
@@ -53,121 +54,7 @@ class _OrderScreenState extends State<OrderScreen>
                   padding:
                       const EdgeInsets.symmetric(horizontal: 17, vertical: 20),
                   color: whiteColor,
-                  child: Column(
-                    crossAxisAlignment: CrossAxisAlignment.start,
-                    children: [
-                      const Text(
-                        'Gel Al Seçimi',
-                        style: TextStyle(
-                          fontWeight: FontWeight.bold,
-                          fontSize: 16,
-                        ),
-                      ),
-                      const SizedBox(
-                        height: 20,
-                      ),
-                      Container(
-                        padding: const EdgeInsets.symmetric(
-                            horizontal: 11, vertical: 14),
-                        decoration: BoxDecoration(
-                          border: Border.all(
-                            color: secondaryGrey,
-                            style: BorderStyle.solid,
-                            width: 1.0,
-                          ),
-                          color: Colors.transparent,
-                          borderRadius: BorderRadius.circular(10.0),
-                        ),
-                        child: Column(
-                          children: [
-                            Row(
-                              children: const [
-                                Text(
-                                  'Paketinizi alma zamanı',
-                                  style: TextStyle(color: primaryGrey),
-                                ),
-                              ],
-                            ),
-                            const SizedBox(
-                              height: 10,
-                            ),
-                            Row(
-                              children: [
-                                Row(
-                                  children: [
-                                    Image.asset("assets/icons/clock.png"),
-                                    const SizedBox(
-                                      width: 10,
-                                    ),
-                                    const Text(
-                                      '13:00',
-                                      style: TextStyle(
-                                        fontWeight: FontWeight.bold,
-                                      ),
-                                    )
-                                  ],
-                                ),
-                                const Expanded(
-                                  child: Text(
-                                    'Değiştir',
-                                    textAlign: TextAlign.end,
-                                    style:
-                                        TextStyle(fontWeight: FontWeight.bold),
-                                  ),
-                                ),
-                              ],
-                            ),
-                          ],
-                        ),
-                      ),
-                      const SizedBox(
-                        height: 10,
-                      ),
-                      Container(
-                        padding: const EdgeInsets.symmetric(
-                            horizontal: 11, vertical: 14),
-                        decoration: BoxDecoration(
-                          border: Border.all(
-                            color: secondaryGrey,
-                            style: BorderStyle.solid,
-                            width: 1.0,
-                          ),
-                          color: Colors.transparent,
-                          borderRadius: BorderRadius.circular(10.0),
-                        ),
-                        child: Column(
-                          children: [
-                            Row(
-                              children: [
-                                Row(
-                                  children: [
-                                    Image.asset("assets/icons/home-local.png"),
-                                    const SizedBox(
-                                      width: 10,
-                                    ),
-                                    const Text(
-                                      'Kadıköy, İstanbul',
-                                      style: TextStyle(
-                                        fontWeight: FontWeight.bold,
-                                      ),
-                                    )
-                                  ],
-                                ),
-                                const Expanded(
-                                  child: Text(
-                                    'Değiştir',
-                                    textAlign: TextAlign.end,
-                                    style:
-                                        TextStyle(fontWeight: FontWeight.bold),
-                                  ),
-                                ),
-                              ],
-                            ),
-                          ],
-                        ),
-                      )
-                    ],
-                  ),
+                  child: const OrderOption(),
                 ),
                 const SizedBox(
                   height: 10,
@@ -190,7 +77,7 @@ class _OrderScreenState extends State<OrderScreen>
                         ),
                       ),
                       const SizedBox(
-                        height: 20,
+                        height: 10,
                       ),
                       TabBar(
                         labelPadding: const EdgeInsets.symmetric(horizontal: 5),
@@ -206,7 +93,7 @@ class _OrderScreenState extends State<OrderScreen>
                       ),
                       Container(
                         padding: const EdgeInsets.symmetric(vertical: 20),
-                        height: 280,
+                        height: 400,
                         child: TabBarView(
                           controller: tabController,
                           children: [

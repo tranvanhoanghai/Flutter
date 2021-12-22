@@ -20,7 +20,7 @@ class _TagItemState extends State<TagItem> {
           width: 1.0,
         ),
         color: Colors.transparent,
-        borderRadius: BorderRadius.circular(10.0),
+        borderRadius: BorderRadius.circular(5.0),
       ),
       padding: const EdgeInsets.symmetric(
         horizontal: 20,
@@ -31,7 +31,7 @@ class _TagItemState extends State<TagItem> {
           alignment: Alignment.center,
           child: Text(
             widget.title,
-            style: TextStyle(fontSize: 16),
+            style: const TextStyle(fontSize: 16),
           ),
         ),
       ),

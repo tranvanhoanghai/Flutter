@@ -7,6 +7,8 @@ import 'package:week6/screen/orders/order.dart';
 class BottomNav extends StatefulWidget {
   static String path = homeScreen;
 
+  const BottomNav({Key? key}) : super(key: key);
+
   @override
   _BottomNavState createState() => _BottomNavState();
 }
